@@ -9,30 +9,47 @@
 </head>
 
 <body>
-    <canvas id="canvas" class="canvas"></canvas>
+    <div class="color-options">
+        <input type="color" id="color" />
+        <div id="colorOptions" class="color-option-group">
+            <div class="color-option" style="background-color: #1abc9c" data-color="#1abc9c"></div>
+            <div class="color-option" style="background-color: #3498db" data-color="#3498db"></div>
+            <div class="color-option" style="background-color: #34495e" data-color="#34495e"></div>
+            <div class="color-option" style="background-color: #27ae60" data-color="#27ae60"></div>
+            <div class="color-option" style="background-color: #8e44ad" data-color="#8e44ad"></div>
+            <div class="color-option" style="background-color: #f1c40f" data-color="#f1c40f"></div>
+            <div class="color-option" style="background-color: #e74c3c" data-color="#e74c3c"></div>
+            <div class="color-option" style="background-color: #95a5a6" data-color="#95a5a6"></div>
+            <div class="color-option" style="background-color: #d35400" data-color="#d35400"></div>
+            <div class="color-option" style="background-color: #2ecc71" data-color="#2ecc71"></div>
+            <div class="color-option" style="background-color: #e67e22" data-color="#e67e22"></div>
+        </div>
+      </div>
 
-    <div class="controls">
-        <div class="controls__range">
-            <input type="range" id="range" min="0.1" max="5" value="2.5" step="0.1" />
+      <canvas id="canvas"></canvas>
+
+      <div class="btns">
+        <input id="line-width" type="range" min="1" max="10" value="5" step="0.1" />
+
+        <div id="mode-btn">
+            <input type="radio" id="fill-mode" name="mode" value="fill" />
+            <label for="fill-mode">Fill</label>
+            <input type="radio" id="bucket-mode" name="mode" value="bucket" />
+            <label for="bucket-mode">Bucket</label>
+            <input type="radio" id="draw-mode" name="mode" value="draw" checked />
+            <label for="draw-mode">Draw</label>
         </div>
 
-        <div class="controls__btns">
-            <button id="modeBtn">Fill</button>
-            <button id="saveBtn">Save</button>
-        </div>
+        <button id="destroy-btn">💣 Destroy</button>
+        <button id="eraser-btn">❌ Erase</button>
+        <label for="file">
+          💅🏻 Add Photo
+          <input type="file" accept="image/*" id="file"/>
+        </label>
+        <input type="text" id="text" placeholder="Add text here... :)" />
+        <button id="save-btn">🖼 Save image</button>
+      </div>
 
-        <div id="colors" class="controls__colors">
-            <div class="controls__color pen-color" style="background-color: #2c2c2c;"></div>
-            <div class="controls__color pen-color" style="background-color: white;"></div>
-            <div class="controls__color pen-color" style="background-color: #ff3b30;"></div>
-            <div class="controls__color pen-color" style="background-color: #ff9500;"></div>
-            <div class="controls__color pen-color" style="background-color: #ffcc00;"></div>
-            <div class="controls__color pen-color" style="background-color: #4cd963;"></div>
-            <div class="controls__color pen-color" style="background-color: #5ac8fa;"></div>
-            <div class="controls__color pen-color" style="background-color: #0579ff;"></div>
-            <div class="controls__color pen-color" style="background-color: #5856d6;"></div>
-        </div>
-    </div>
     <script src="app.js"></script>
 </body>
 
